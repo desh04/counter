@@ -20,25 +20,33 @@ export const CountSection = (props: CountSection) => {
   );
 
   const increase = () => {
-    const newCount = count + 1;
+    if (typeof window !== "undefined") {
+      const newCount = count + 1;
 
-    const countObj = JSON.parse(window.localStorage.getItem(COUNT_OBJ) || "{}");
+      const countObj = JSON.parse(
+        window.localStorage.getItem(COUNT_OBJ) || "{}"
+      );
 
-    countObj[`${title}`] = newCount;
+      countObj[`${title}`] = newCount;
 
-    window.localStorage.setItem(COUNT_OBJ, JSON.stringify(countObj));
-    setCount(newCount);
+      window.localStorage.setItem(COUNT_OBJ, JSON.stringify(countObj));
+      setCount(newCount);
+    }
   };
 
   const decrease = () => {
-    const newCount = count - 1;
+    if (typeof window !== "undefined") {
+      const newCount = count - 1;
 
-    const countObj = JSON.parse(window.localStorage.getItem(COUNT_OBJ) || "{}");
+      const countObj = JSON.parse(
+        window.localStorage.getItem(COUNT_OBJ) || "{}"
+      );
 
-    countObj[`${title}`] = newCount;
+      countObj[`${title}`] = newCount;
 
-    window.localStorage.setItem(COUNT_OBJ, JSON.stringify(countObj));
-    setCount(newCount);
+      window.localStorage.setItem(COUNT_OBJ, JSON.stringify(countObj));
+      setCount(newCount);
+    }
   };
 
   return (

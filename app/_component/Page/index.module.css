@@ -1,0 +1,35 @@
+.page {
+  padding: 1rem;
+}
+
+.addSection {
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.sectionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.resetBtn {
+  border: 1 solid red;
+  border-radius: 8px;
+  padding: 4px;
+  font-size: 1.5rem;
+  background-color: white;
+  font-weight: bold;
+  color: red;
+}
+.resetBtn:hover {
+  background-color: red;
+  font-weight: bold;
+  color: white;
+  transition: 500ms;
+}
